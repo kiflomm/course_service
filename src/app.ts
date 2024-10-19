@@ -5,7 +5,7 @@ import courseRouter from "./routes/courseRouter"
 dotenv.config()
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 const mongoDbUrl : string = process.env.MONGODB_CONNECT_STRING as string
 
 app.use(express.json())
@@ -14,7 +14,7 @@ app.use(express.urlencoded())
 mongoose.connect(mongoDbUrl).then(()=>{
     console.log("mongodb connected successfully")
     app.listen(port,()=>{
-        console.log("server is running")
+        console.log(`server is running on port ${port}`)
     })
 }).catch(error =>{
     console.log("database connection unsuccessful")
