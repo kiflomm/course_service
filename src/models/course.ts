@@ -20,7 +20,7 @@ const courseSchema = new Schema<ICourse>({
         required : true
     },
     prerequisite: {
-        type:  [Schema.Types.ObjectId],
+        type:  [String],
         ref: 'Course', 
         default: null 
     }

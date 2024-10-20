@@ -5,7 +5,7 @@ import courseRouter from "./routes/courseRouter"
 dotenv.config()
 
 const app = express()
-const port = process.env.PORT || 5001
+const port = process.env.PORT || 3050
 const mongoDbUrl : string = process.env.MONGODB_CONNECT_STRING as string
 
 app.use(express.json())
